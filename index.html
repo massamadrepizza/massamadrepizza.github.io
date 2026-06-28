@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massa Madre | Pizzaria Artesanal</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-accent">Massa</span>Madre
+            </a>
+            <div class="nav-links">
+                <a href="#cardapio" class="nav-link">Cardápio</a>
+                <a href="#diferenciais" class="nav-link">Nossos Segredos</a>
+                <button class="cart-trigger" id="cart-btn" aria-label="Abrir carrinho">
+                    <i data-lucide="shopping-cart"></i>
+                    <span class="cart-badge" id="cart-badge">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-tag">Fermentação Natural • 48 Horas</span>
+                <h1>Massa Madre.<br><span class="highlight">Ingredientes reais.</span></h1>
+                <p>Molho de tomate italiano fresco, mozzarellas selecionadas e o ponto perfeito do forno a lenha, embalados para chegar impecáveis à sua mesa.</p>
+                <div class="hero-actions">
+                    <a href="#cardapio" class="btn-primary">Escolher minha pizza</a>
+                    <a href="#diferenciais" class="btn-secondary">Nossos Diferenciais</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Menu Section -->
+        <section id="cardapio" class="menu-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nossas Especialidades</h2>
+                    <p>Feitas artesanalmente com farinha italiana tipo 00 e paciência</p>
+                </div>
+                
+                <div class="grid-menu">
+                    <!-- Margherita Especial -->
+                    <div class="pizza-card" data-pizza-id="margherita" data-name="Margherita Especial" data-price="45.00" data-description="Molho artesanal, mozzarella de búfala, manjericão fresco e azeite extra virgem.">
+                        <div class="pizza-img-container">
+                            <img src="assets/margherita.jpg" alt="Margherita Especial Pizza" class="pizza-image">
+                            <span class="pizza-tag">Favorita</span>
+                        </div>
+                        <div class="pizza-body">
+                            <h3>Margherita Especial</h3>
+                            <p class="pizza-desc">Molho artesanal, mozzarella de búfala, manjericão fresco e azeite extra virgem sobre nossa massa aerada de 48h.</p>
+                            <div class="pizza-footer">
+                                <span class="pizza-price">R$ 45,00</span>
+                                <button class="btn-primary buy-btn">Customizar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calabresa Artesanal -->
+                    <div class="pizza-card" data-pizza-id="calabresa" data-name="Calabresa Artesanal" data-price="48.00" data-description="Molho da casa, calabresa defumada premium, cebola roxa e orégano fresco.">
+                        <div class="pizza-img-container">
+                            <img src="assets/calabresa.jpg" alt="Calabresa Artesanal Pizza" class="pizza-image">
+                            <span class="pizza-tag">Clássica</span>
+                        </div>
+                        <div class="pizza-body">
+                            <h3>Calabresa Artesanal</h3>
+                            <p class="pizza-desc">Molho da casa, calabresa defumada premium, cebola roxa laminada e orégano fresco.</p>
+                            <div class="pizza-footer">
+                                <span class="pizza-price">R$ 48,00</span>
+                                <button class="btn-primary buy-btn">Customizar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quatro Queijos Premium -->
+                    <div class="pizza-card" data-pizza-id="quatro_queijos" data-name="Quatro Queijos Premium" data-price="52.00" data-description="Gorgonzola doce, provolone defumado, mozzarella e toque de mel silvestre.">
+                        <div class="pizza-img-container">
+                            <img src="assets/quatro_queijos.jpg" alt="Quatro Queijos Premium Pizza" class="pizza-image">
+                            <span class="pizza-tag">Gourmet</span>
+                        </div>
+                        <div class="pizza-body">
+                            <h3>Quatro Queijos Premium</h3>
+                            <p class="pizza-desc">Gorgonzola doce, provolone defumado, mozzarella selecionada e um toque final de mel silvestre.</p>
+                            <div class="pizza-footer">
+                                <span class="pizza-price">R$ 52,00</span>
+                                <button class="btn-primary buy-btn">Customizar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="diferenciais" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Por que Massa Madre?</h2>
+                    <p>O segredo está no tempo, no respeito à tradição e na escolha dos ingredientes.</p>
+                </div>
+                <div class="grid-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <h4>48h de Fermentação</h4>
+                        <p>Massa extremamente leve, perfeitamente aerada e de fácil digestão, feita com paciência e farinha 00.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i data-lucide="droplet"></i>
+                        </div>
+                        <h4>Tomates Italianos</h4>
+                        <p>Molho 100% natural, preparado diariamente com tomates italianos maduros e pitada de sal marinho.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i data-lucide="truck"></i>
+                        </div>
+                        <h4>Foco em Delivery & Retirada</h4>
+                        <p>Logística inteligente e embalagens térmicas desenvolvidas para manter a crocância da massa intacta.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <span class="tag-operacao"><i data-lucide="circle" class="online-indicator"></i> Exclusivo para Delivery e Retirada</span>
+            <p class="footer-hours"><strong>Horário de Funcionamento:</strong> Terça a Domingo, das 18h às 23h.</p>
+            <p class="footer-info">Retiradas na nossa unidade central (verifique localização no fechamento).</p>
+            <button class="btn-primary custom-order-btn" id="custom-order-btn">Pedido Sob Encomenda</button>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Massa Madre. Todos os direitos reservados. Feito com amor e fermento natural.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Slide-out Cart Drawer -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Seu Carrinho</h3>
+            <button class="close-cart-btn" id="close-cart" aria-label="Fechar carrinho">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+        <div class="cart-body">
+            <!-- Delivery Options -->
+            <div class="delivery-toggle-container">
+                <button class="delivery-toggle-btn active" id="toggle-delivery" data-mode="delivery">
+                    <i data-lucide="bike"></i> Delivery
+                </button>
+                <button class="delivery-toggle-btn" id="toggle-pickup" data-mode="pickup">
+                    <i data-lucide="store"></i> Retirada
+                </button>
+            </div>
+
+            <!-- Cart Items list -->
+            <div class="cart-items" id="cart-items">
+                <!-- Dynamic Items Inserted Here -->
+                <div class="empty-cart-message">
+                    <i data-lucide="shopping-bag" class="empty-icon"></i>
+                    <p>Seu carrinho está vazio.</p>
+                    <a href="#cardapio" class="btn-secondary close-cart-btn-link">Ver cardápio</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="price-row">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">R$ 0,00</span>
+            </div>
+            <div class="price-row" id="delivery-fee-row">
+                <span>Taxa de Entrega</span>
+                <span id="cart-delivery-fee">R$ 7,00</span>
+            </div>
+            <div class="price-row total-row">
+                <span>Total</span>
+                <span id="cart-total">R$ 0,00</span>
+            </div>
+            <button class="btn-primary checkout-btn" id="checkout-btn" disabled>Fechar Pedido</button>
+        </div>
+    </aside>
+
+    <!-- Customizer Modal -->
+    <div class="modal-overlay" id="customizer-modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 id="customizer-title">Customizar Pizza</h3>
+                <button class="close-modal-btn" data-close-modal="customizer-modal">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="customizer-preview">
+                    <img id="customizer-img" src="" alt="Pizza Preview" class="customizer-pizza-img">
+                    <div class="customizer-meta">
+                        <p id="customizer-desc"></p>
+                    </div>
+                </div>
+
+                <form id="customizer-form">
+                    <!-- Size Selection -->
+                    <div class="customizer-section">
+                        <h4>Escolha o Tamanho</h4>
+                        <div class="options-group size-group">
+                            <label class="option-card">
+                                <input type="radio" name="pizza-size" value="brotinho" data-price-mod="-5.00">
+                                <span class="option-label">
+                                    <span class="option-title">Brotinho <span class="size-detail">(20cm - 4 fatias)</span></span>
+                                    <span class="option-price">- R$ 5,00</span>
+                                </span>
+                            </label>
+                            <label class="option-card active">
+                                <input type="radio" name="pizza-size" value="media" data-price-mod="0.00" checked>
+                                <span class="option-label">
+                                    <span class="option-title">Média <span class="size-detail">(30cm - 6 fatias)</span></span>
+                                    <span class="option-price">Padrão</span>
+                                </span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="pizza-size" value="grande" data-price-mod="8.00">
+                                <span class="option-label">
+                                    <span class="option-title">Grande <span class="size-detail">(35cm - 8 fatias)</span></span>
+                                    <span class="option-price">+ R$ 8,00</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Toppings / Extras -->
+                    <div class="customizer-section">
+                        <h4>Ingredientes Extras</h4>
+                        <div class="options-group">
+                            <label class="checkbox-card">
+                                <input type="checkbox" name="pizza-extras" value="double_cheese" data-price="5.00">
+                                <span class="checkbox-label">
+                                    <span class="checkbox-title">Mozzarella Extra</span>
+                                    <span class="checkbox-price">+ R$ 5,00</span>
+                                </span>
+                            </label>
+                            <label class="checkbox-card">
+                                <input type="checkbox" name="pizza-extras" value="olives" data-price="3.00">
+                                <span class="checkbox-label">
+                                    <span class="checkbox-title">Azeitonas Pretas</span>
+                                    <span class="checkbox-price">+ R$ 3,00</span>
+                                </span>
+                            </label>
+                            <label class="checkbox-card">
+                                <input type="checkbox" name="pizza-extras" value="hot_honey" data-price="6.00">
+                                <span class="checkbox-label">
+                                    <span class="checkbox-title">Mel Silvestre Picante</span>
+                                    <span class="checkbox-price">+ R$ 6,00</span>
+                                </span>
+                            </label>
+                            <label class="checkbox-card">
+                                <input type="checkbox" name="pizza-extras" value="basil" data-price="2.00">
+                                <span class="checkbox-label">
+                                    <span class="checkbox-title">Manjericão Extra</span>
+                                    <span class="checkbox-price">+ R$ 2,00</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Special Notes -->
+                    <div class="customizer-section">
+                        <h4>Observações</h4>
+                        <textarea id="pizza-notes" placeholder="Ex: Tirar cebola, bem passada, sem mel, etc." rows="2" maxlength="150"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-price-display">
+                    <span class="modal-price-label">Preço Unitário:</span>
+                    <span class="modal-price-value" id="customizer-total-price">R$ 0,00</span>
+                </div>
+                <button class="btn-primary" id="add-to-cart-submit">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal-overlay" id="checkout-modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Finalizar Pedido</h3>
+                <button class="close-modal-btn" data-close-modal="checkout-modal">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="checkout-form">
+                    <div class="form-section">
+                        <h4>Dados do Cliente</h4>
+                        <div class="form-group">
+                            <label for="customer-name">Nome Completo *</label>
+                            <input type="text" id="customer-name" required placeholder="Digite seu nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-phone">Telefone / WhatsApp *</label>
+                            <input type="tel" id="customer-phone" required placeholder="(11) 99999-9999">
+                        </div>
+                    </div>
+
+                    <!-- Address Info (hidden if pickup) -->
+                    <div class="form-section" id="checkout-address-section">
+                        <h4>Endereço de Entrega</h4>
+                        <div class="form-group">
+                            <label for="address-street">Rua e Número *</label>
+                            <input type="text" id="address-street" placeholder="Rua das Flores, 123">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="address-neighborhood">Bairro *</label>
+                                <input type="text" id="address-neighborhood" placeholder="Centro">
+                            </div>
+                            <div class="form-group">
+                                <label for="address-complement">Complemento</label>
+                                <input type="text" id="address-complement" placeholder="Apt 42, Bloco B">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pickup Info (shown if pickup) -->
+                    <div class="form-section" id="checkout-pickup-section" style="display: none;">
+                        <h4>Retirada no Balcão</h4>
+                        <div class="pickup-info-card">
+                            <i data-lucide="map-pin"></i>
+                            <div>
+                                <p><strong>Endereço para Retirada:</strong></p>
+                                <p>Av. das Pizzarias, 1000 - Centro, Massa Madre Hub</p>
+                                <p class="pickup-time-hint">Disponível para retirada em 25 a 35 minutos após confirmação.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h4>Forma de Pagamento</h4>
+                        <div class="payment-selector">
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="pix" checked>
+                                <span><i data-lucide="qr-code"></i> Pix</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="card">
+                                <span><i data-lucide="credit-card"></i> Cartão (na entrega/balcão)</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment-method" value="cash">
+                                <span><i data-lucide="banknote"></i> Dinheiro</span>
+                            </label>
+                        </div>
+                        <div class="form-group" id="cash-change-group" style="display: none;">
+                            <label for="cash-change">Precisa de troco para quanto?</label>
+                            <input type="number" id="cash-change" placeholder="Ex: R$ 100">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="checkout-summary-bar">
+                    <div>
+                        <span class="summary-label" id="summary-total-label">Total com entrega:</span>
+                        <span class="summary-value" id="checkout-total-price">R$ 0,00</span>
+                    </div>
+                </div>
+                <button class="btn-primary" id="confirm-order-btn">Enviar Pedido para Produção</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="success-modal">
+        <div class="modal-container success-container">
+            <div class="success-icon-wrapper">
+                <div class="success-ring"></div>
+                <i data-lucide="check" class="success-icon"></i>
+            </div>
+            <h2>Pedido Confirmado!</h2>
+            <p>Seu pedido foi enviado para a cozinha da <strong>Massa Madre</strong>.</p>
+            
+            <div class="success-details-card">
+                <div class="detail-row">
+                    <span>Pedido:</span>
+                    <strong id="success-order-id">#MM-4829</strong>
+                </div>
+                <div class="detail-row">
+                    <span>Tempo Estimado:</span>
+                    <strong id="success-order-time">35-45 min</strong>
+                </div>
+                <div class="detail-row">
+                    <span>Modo:</span>
+                    <strong id="success-order-mode">Delivery</strong>
+                </div>
+            </div>
+
+            <p class="success-message">Você receberá atualizações sobre a produção do seu pedido em breve.</p>
+            <button class="btn-primary" id="close-success-btn">Voltar para o Cardápio</button>
+        </div>
+    </div>
+
+    <!-- Custom Order Modal -->
+    <div class="modal-overlay" id="custom-order-modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Pedido Sob Encomenda</h3>
+                <button class="close-modal-btn" data-close-modal="custom-order-modal">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="custom-modal-intro">Quer organizar um evento ou encomendar uma quantidade maior de pizzas com massas especiais? Fale conosco!</p>
+                <div class="encomenda-card">
+                    <i data-lucide="calendar"></i>
+                    <div>
+                        <p><strong>Planejamento antecipado</strong></p>
+                        <p>Para pedidos acima de 5 pizzas ou massas de longa maturação específicas, solicitamos aviso prévio de 24 horas.</p>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top: 20px;">
+                    <label for="custom-order-details">Detalhes da sua Encomenda</label>
+                    <textarea id="custom-order-details" placeholder="Escreva a quantidade, data e horário desejados para o seu evento..." rows="4"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" data-close-modal="custom-order-modal">Cancelar</button>
+                <button class="btn-primary" id="send-custom-whatsapp-btn">Enviar via WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Script -->
+    <script src="app.js"></script>
+</body>
+</html>
